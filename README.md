@@ -13,6 +13,9 @@ Ensure 'ffmpeg' is installed and added to your PATH to use 'pydub' for audio pla
 - Text-to-Speech: Converts the processed text into speech using gTTS.
 - Audio Playback: Saves the speech as an MP3 file and plays it.
 
+## GUI 
+<img width="404" alt="image" src="https://github.com/user-attachments/assets/c2f98123-fa28-48c8-84a2-4aff6908cf39" />
+
 ## Requirements
 - Python: 3.x
 - newspaper3k: Install using pip install newspaper3k

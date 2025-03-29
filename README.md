@@ -10,7 +10,7 @@ The Webpage to Speech Converter is a simple web application that extracts text f
 - Plays the generated speech directly in the browser
   
 ## GUI 
-<<img width="870" alt="image" src="https://github.com/user-attachments/assets/151cdd45-2b1f-43d4-b941-8db0a574c013" />
+<img width="870" alt="image" src="https://github.com/user-attachments/assets/151cdd45-2b1f-43d4-b941-8db0a574c013" />
 
 ## Demo
 https://huggingface.co/spaces/vanshika-garg/website_read_aloud

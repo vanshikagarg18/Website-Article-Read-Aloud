@@ -1,17 +1,15 @@
 # Website-Article-Read-Aloud
 
 ## Overview
-This project is a Python-based application that converts the text of a website article into speech. It utilizes the 'newspaper3k' library for web scraping, 'nltk' for natural language processing, and 'gTTS' (Google Text-to-Speech) for converting text to audio. The generated speech is saved as an MP3 file and played automatically.
-
-The 'newspaper3k' library is designed for easy web scraping and article extraction but may not work perfectly with all websites. Test with different URLs to ensure compatibility.
-The 'gTTS' library provides a simple interface to Google Text-to-Speech, but it requires an internet connection to function.
-Ensure 'ffmpeg' is installed and added to your PATH to use 'pydub' for audio playback.
+This Python-based application allows users to convert the text of a webpage article into speech. It features a graphical user interface (GUI) built with Tkinter, enabling users to enter a URL and listen to the extracted text. The application utilizes the newspaper3k library for web scraping and pyttsx3 for text-to-speech conversion, allowing offline functionality.
 
 ## Features
-- Web Scraping: Downloads and parses an article from a given URL.
-- Natural Language Processing: Uses nltk to process the text.
-- Text-to-Speech: Converts the processed text into speech using gTTS.
-- Audio Playback: Saves the speech as an MP3 file and plays it.
+- Web Scraping: Downloads and extracts an article from a given URL using newspaper3k.
+- Text-to-Speech: Converts extracted text into speech using pyttsx3.
+- Adjustable Speech Speed: Users can increase or decrease the speech speed.
+- Gradient Background: A visually appealing gradient enhances the UI.
+- Threading Support: Runs speech conversion in a separate thread to keep the GUI responsive.
+- Copy & Clear: Users can easily clear the URL input box.
 
 ## GUI 
 <img width="404" alt="image" src="https://github.com/user-attachments/assets/c2f98123-fa28-48c8-84a2-4aff6908cf39" />
@@ -19,15 +17,26 @@ Ensure 'ffmpeg' is installed and added to your PATH to use 'pydub' for audio pla
 ## Requirements
 - Python: 3.x
 - newspaper3k: Install using pip install newspaper3k
-- nltk: Install using pip install nltk
-- gTTS: Install using pip install gTTS
-- pydub: Install using pip install pydub (required for playing the mp3 file)
+- pyttsx3: Install using pip install pyttsx3
+- ttkthemes: Install using pip install ttkthemes
+- Additional Dependencies: Install ffmpeg (for better audio support on some systems)
 
 ## How to Use
 1) Setup:
-- Ensure Python and the required packages are installed on your system.
-- Install ffmpeg and add it to your system's PATH.
+  - Ensure Python and the required packages are installed.
+  - Install ffmpeg and add it to your system's PATH (if needed).
 2) Run the Script:
-- Copy the provided code into a Python script file.
-- Replace the article URL with the URL of the article you want to convert to speech.
-- Execute the script to generate and play the audio.
+  - Copy the provided code into a Python script file.
+  - Run the script using: python script.py
+3) Enter a URL:
+  - Paste the URL of an article into the text box.
+  - Click the "Convert & Play" button to start speech conversion.
+4) Control Speech Speed:
+  - Use the "➖ Slow" and "➕ Fast" buttons to adjust the speech speed.
+5) Clear the Input:
+  - Click "Clear" to remove the entered URL.
+
+## Notes
+- The newspaper3k library may not work on all websites. Test with different URLs.
+- pyttsx3 runs offline, so an internet connection is not required.
+- Speech speed ranges from 75 WPM to 250 WPM.

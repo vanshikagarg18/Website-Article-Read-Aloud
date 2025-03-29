@@ -1,42 +1,27 @@
 # Website-Article-Read-Aloud
 
 ## Overview
-This Python-based application allows users to convert the text of a webpage article into speech. It features a graphical user interface (GUI) built with Tkinter, enabling users to enter a URL and listen to the extracted text. The application utilizes the newspaper3k library for web scraping and pyttsx3 for text-to-speech conversion, allowing offline functionality.
+The Webpage to Speech Converter is a simple web application that extracts text from any online article and converts it into speech using Google Text-to-Speech (gTTS). The user enters a URL, and the app processes the webpage content, extracts readable text, and plays an audio version of it.
 
 ## Features
-- Web Scraping: Downloads and extracts an article from a given URL using newspaper3k.
-- Text-to-Speech: Converts extracted text into speech using pyttsx3.
-- Adjustable Speech Speed: Users can increase or decrease the speech speed.
-- Gradient Background: A visually appealing gradient enhances the UI.
-- Threading Support: Runs speech conversion in a separate thread to keep the GUI responsive.
-- Copy & Clear: Users can easily clear the URL input box.
-
+- Extracts text from any webpage
+- Converts text into speech using gTTS
+- Displays extracted text for reference
+- Plays the generated speech directly in the browser
+  
 ## GUI 
-<img width="404" alt="image" src="https://github.com/user-attachments/assets/c2f98123-fa28-48c8-84a2-4aff6908cf39" />
+<<img width="870" alt="image" src="https://github.com/user-attachments/assets/151cdd45-2b1f-43d4-b941-8db0a574c013" />
+
+## Demo
+https://huggingface.co/spaces/vanshika-garg/website_read_aloud
 
 ## Requirements
-- Python: 3.x
-- newspaper3k: Install using pip install newspaper3k
-- pyttsx3: Install using pip install pyttsx3
-- ttkthemes: Install using pip install ttkthemes
-- Additional Dependencies: Install ffmpeg (for better audio support on some systems)
-
-## How to Use
-1) Setup:
-  - Ensure Python and the required packages are installed.
-  - Install ffmpeg and add it to your system's PATH (if needed).
-2) Run the Script:
-  - Copy the provided code into a Python script file.
-  - Run the script using: python script.py
-3) Enter a URL:
-  - Paste the URL of an article into the text box.
-  - Click the "Convert & Play" button to start speech conversion.
-4) Control Speech Speed:
-  - Use the "➖ Slow" and "➕ Fast" buttons to adjust the speech speed.
-5) Clear the Input:
-  - Click "Clear" to remove the entered URL.
+- Python (Backend processing)
+- Gradio (User Interface)
+- newspaper3k (Text extraction from articles)
+- gTTS (Google Text-to-Speech) (Text-to-speech conversion)
 
 ## Notes
 - The newspaper3k library may not work on all websites. Test with different URLs.
-- pyttsx3 runs offline, so an internet connection is not required.
+- gTTS runs online, so an internet connection is required.
 - Speech speed ranges from 75 WPM to 250 WPM.
